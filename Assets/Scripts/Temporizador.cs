@@ -10,6 +10,8 @@ public class Temporizador : MonoBehaviour
     private float tiempoRestante; // Tiempo restante en segundos
 
     public Text textoTiempo; // Texto para mostrar el tiempo en tu interfaz de usuario
+    public float tiempoRes = 60f;
+
 
     void Start()
     {
@@ -29,6 +31,10 @@ public class Temporizador : MonoBehaviour
         {
             // Hacer lo que necesites al llegar a cero
             TiempoTerminado();
+        }
+        if (tiempoRes > 0f)
+        {
+            tiempoRes -= Time.deltaTime;
         }
     }
 

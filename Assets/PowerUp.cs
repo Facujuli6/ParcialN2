@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    public float effectDuration = 7f;
+    public float effectDuration = 9f;
     public Vector3 scaleEffect = new Vector3(0.1f, 0.1f, 0.1f);
 
     private void Start()
@@ -19,7 +19,7 @@ public class PowerUp : MonoBehaviour
 
         transform.position = new Vector3(Random.Range(-5f, 5f), Random.Range(-3f, 3f), 0f);
         gameObject.SetActive(true);
-        Invoke("DesactivarPowerUp", effectDuration);
+        Invoke("DesactivarPowerUp", 5f);
     }
 
     private void DesactivarPowerUp()
